@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+            xmlns:gap   = "http://phonegap.com/ns/1.0"
+            id          = "com.LlorenteCuenca.RevistaUNO"
+            versionCode = "10" 
+            version     = "1.0.3" >
+
+    <name>Hidratacion</name>
+    
+    <icon src="icon.png" /> 
+    
+    <!-- retina iPad support: PhoneGap 2.5.0+ only -->
+    <icon src="img/ios/coca.png" gap:platform="ios" width="144" height="144" />
+
+    <description>
+        Esto es una Prueba para la APP de Hidratacion
+    </description>
+
+    <author href="http://www.llorenteycuenca.com" email="vvalverde@llorenteycuenca.com">
+        Victor Valverde
+    </author>
+    
+    <preference name="orientation" value="landscape" />
+    <preference name="DisallowOverscroll" value="false" />
+    
+    
+    <!--<content src="index.html" />
+    <access origin="*" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="BackgroundColor" value="0xff0000ff"/>
+    <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+    <preference name="WebViewBounce" value="true" />-->
+
+
+</widget>
