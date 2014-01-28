@@ -144,12 +144,19 @@
     border-radius: 3px;
 }
 .dwwc {
+    background: url("../../../img/picker-anos.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    height: 235px;
     margin: 0;
     padding: 0 2px;
     position: relative;
-    background: #000;
+    width: 250px;
     zoom: 1;
 }
+
+.dwwc table{
+    width: 64%;
+}
+
 /* Datewheel wheels */
 .dwwl {
     margin: 4px 2px;
@@ -170,19 +177,22 @@
     opacity: .99; /* Fixes Firefox translate overflow bug */
 }
 .dwsc .dwwl {
-    background: #888;
+    /*background: #888;
     background: -webkit-gradient(linear,left bottom,left top,from(#000),color-stop(0.35, #333),color-stop(0.50, #888),color-stop(0.65, #333),to(#000));
     background: -webkit-linear-gradient(#000 0%,#333 35%, #888 50%,#333 65%,#000 100%);
     background: -moz-linear-gradient(#000 0%,#333 35%, #888 50%,#333 65%,#000 100%);
-    background: linear-gradient(#000 0%,#333 35%, #888 50%,#333 65%,#000 100%);
+    background: linear-gradient(#000 0%,#333 35%, #888 50%,#333 65%,#000 100%);*/
+    background: transparent;
 }
 .dwsc .dww {
-    color: #fff;
+    /*color: #fff;
     background: #444;
     background: -webkit-gradient(linear,left bottom,left top,from(#000),color-stop(0.45, #444),color-stop(0.55, #444),to(#000));
     background: -webkit-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
     background: -moz-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
-    background: linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+    background: linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);*/
+    background: transparent;
+    height: 230px !important;
 }
 .dw-bf {
     -webkit-perspective: 1000;
@@ -191,6 +201,7 @@
 .dw-ul {
     position: relative;
     z-index: 2;
+    top: 18.5%;
 }
 .dw-li {
     padding: 0 5px;
@@ -203,7 +214,13 @@
     vertical-align: bottom;
     opacity: .3;
     filter: Alpha(Opacity=30);
+    height: 83px !important;
 }
+
+.dw-ul .dw-sel{
+    height: 63px !important;
+}
+
 /* Higlighted */
 .dw-li.dw-hl {
     background: #fff;
@@ -270,15 +287,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: -webkit-gradient(linear,left bottom,left top,from(#000),color-stop(0.52, rgba(44,44,44,0)),color-stop(0.48, rgba(44,44,44,0)),to(#000));
+    /*background: -webkit-gradient(linear,left bottom,left top,from(#000),color-stop(0.52, rgba(44,44,44,0)),color-stop(0.48, rgba(44,44,44,0)),to(#000));
     background: -webkit-linear-gradient(#000 0%,rgba(44,44,44,0) 52%, rgba(44,44,44,0) 48%, #000 100%);
     background: -moz-linear-gradient(#000 0%,rgba(44,44,44,0) 52%, rgba(44,44,44,0) 48%, #000 100%);
-    background: linear-gradient(#000 0%,rgba(44,44,44,0) 52%, rgba(44,44,44,0) 48%, #000 100%);
+    background: linear-gradient(#000 0%,rgba(44,44,44,0) 52%, rgba(44,44,44,0) 48%, #000 100%);*/
+    background: transparent;
     pointer-events: none;
 }
 /* Background line */
 .dwwol {
-    position: absolute;
+    /*position: absolute;
     z-index: 1;
     top: 50%;
     left: 0;
@@ -287,7 +305,8 @@
     margin-top: -1px;
     border-top: 1px solid #333;
     border-bottom: 1px solid #555;
-    pointer-events: none;
+    pointer-events: none;*/
+    display: none;
 }
 /* Datewheel button */
 .dwbg .dwb {
@@ -364,9 +383,8 @@
 }
 /* Backgrounds */
 .dwbg .dwwr {
-    background: #fff;
-    color: #000;
-    font-family: arial, verdana, sans-serif;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #000000;
 }
 .dwbg .dwv {
     background-color: #dfdfdf;
