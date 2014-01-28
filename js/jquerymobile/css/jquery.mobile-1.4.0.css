@@ -808,18 +808,18 @@ div.ui-controlgroup-label {
 }
 /* Icons
 -----------------------------------------------------------------------------------------------------------*/
-.ui-btn-icon-left:after,
+/*.ui-btn-icon-left:after,
 .ui-btn-icon-right:after,
 .ui-btn-icon-top:after,
 .ui-btn-icon-bottom:after,
 .ui-btn-icon-notext:after {
-	background-color: 					#666 /*{global-icon-color}*/;
-	background-color: 					rgba(0,0,0,.3) /*{global-icon-disc}*/;
+	background-color: 					#666 ;
+	background-color: 					rgba(0,0,0,.3);
 	background-position: center center;
 	background-repeat: no-repeat;
 	-webkit-border-radius: 1em;
 	border-radius: 1em;
-}
+}*/
 /* Alt icons */
 .ui-alt-icon.ui-btn:after,
 .ui-alt-icon .ui-btn:after,
