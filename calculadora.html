@@ -51,7 +51,15 @@
 		<div class="grid" style="margin: 0px 2%; width: 96%;">
 		    <div id="paso-1" class="pasos">
 			<h2>Introdice tus datos</h2>
-			<p>Sexo</p>
+			<form>
+			    <fieldset data-role="controlgroup" data-type="horizontal">
+				<legend>Sexo:</legend>
+				<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="off">
+				<label for="radio-choice-h-2a">Femenino</label>
+				<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off">
+				<label for="radio-choice-h-2b">Masculino</label>
+			    </fieldset>
+			</form>
 			<select name="Edad" id="age">
 			    <option value="1">1</option>
 			    <option value="2">2</option>
@@ -280,6 +288,45 @@
 				});
 			    });
 			</script>
+		    </div>
+		    
+		    <div id="paso-2" class="pasos">
+			<h2>¿Que ejercicio realizas?</h2>
+			<form>
+			    <fieldset data-role="controlgroup" data-type="horizontal">
+				<legend>Actividad:</legend>
+				<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="off">
+				<label for="radio-choice-h-2a">Anaeróbico</label>
+				<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off">
+				<label for="radio-choice-h-2b">Medianamente aeróbico</label>
+				<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2c" value="off">
+				<label for="radio-choice-h-2c">Aeróbico</label>
+			    </fieldset>
+			</form>
+			<ul>
+			    <li>
+				<a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop"><img src="img/calculadora-pregunta.png" class="adaptive-image" /></a>
+				<div data-role="popup" id="popupBasic">
+				    <p>This is a completely basic popup, no options set.</p>
+				</div>
+			    </li>
+			    <li>
+				<a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop"><img src="img/calculadora-pregunta.png" class="adaptive-image" /></a>
+				<div data-role="popup" id="popupBasic">
+				    <p>This is a completely basic popup, no options set.</p>
+				</div>
+			    </li>
+			    <li>
+				<a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop"><img src="img/calculadora-pregunta.png" class="adaptive-image" /></a>
+				<div data-role="popup" id="popupBasic">
+				    <p>This is a completely basic popup, no options set.</p>
+				</div>
+			    </li>
+			</ul>
+		    </div>
+		    
+		    <div id="paso-3" class="pasos">
+			<h2>Calcula tu necesidad de hidratación diaria</h2>
 		    </div>
 		</div>
 	    </div>
