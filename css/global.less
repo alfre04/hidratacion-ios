@@ -69,6 +69,17 @@ h1,h2,h3,h4,h5,h6{
     }
     /*******Calculadora******/
     .calculadora{
+        .pasos{
+            float: left;
+            width: 32%;
+            .ui-icon-carat-d{
+                padding: 0;
+                float: left;
+                span, #age_dummy, #peso_dummy{
+                    display: none;
+                }
+            }
+        }
         #paso-1{
             h2{
                 background: url("../img/pleca-calculadora1.png");
@@ -100,6 +111,7 @@ h1,h2,h3,h4,h5,h6{
             }
         }
         #paso-2{
+            margin: 0 2%;
             h2{
                 background: url("../img/pleca-calculadora2.png");
                 background-size: 10% auto;
@@ -213,17 +225,6 @@ h1,h2,h3,h4,h5,h6{
                     text-align: left;
                     text-decoration: none;
                     width: 50%;
-                }
-            }
-        }
-        .pasos{
-            float: left;
-            width: 30%;
-            .ui-icon-carat-d{
-                padding: 0;
-                float: left;
-                span, #age_dummy, #peso_dummy{
-                    display: none;
                 }
             }
         }
