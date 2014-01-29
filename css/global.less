@@ -77,14 +77,22 @@ h1,h2,h3,h4,h5,h6{
                 padding-bottom: 2%;
                 padding-left: 14%;
             }
-            .ui-checkbox .ui-btn, .ui-radio .ui-btn{
-                background: none repeat scroll 0 0 #F0F0F0;
-                display: block;
-                padding: 10% 24%;
-            }
-            .ui-radio-on{
-                background: #3d3c3c !important;
-                color: #FFFFFF !important;
+            .ui-controlgroup-controls{
+                float: left;
+                width: 100%;
+                .ui-radio{
+                    width: 44%;
+                }
+                .ui-checkbox .ui-btn, .ui-radio .ui-btn{
+                    background: none repeat scroll 0 0 #F0F0F0;
+                    border-bottom: 2px solid #CECCCC;
+                    padding: 10% 0;
+                    text-align: center;
+                }
+                .ui-radio-on{
+                    background: #3d3c3c !important;
+                    color: #FFFFFF !important;
+                }
             }
         }
         #paso-2{
@@ -117,13 +125,13 @@ h1,h2,h3,h4,h5,h6{
                 float: left;
                 list-style: none outside none;
                 margin-left: 4%;
-                margin-top: 11%;
+                margin-top: 15%;
                 padding: 0;
                 width: 20%;
                 li{
                     padding-bottom: 13%;
                     padding-left: 8%;
-                    width: 55%;
+                    width: 60%;
                 }
             }
         }
