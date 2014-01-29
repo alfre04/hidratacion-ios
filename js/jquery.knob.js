@@ -683,7 +683,7 @@
                         ,'margin-top' : ((this.w / 3) >> 0) + 'px'
                         ,'margin-left' : '-' + ((this.w * 3 / 4 + 2) >> 0) + 'px'
                         ,'border' : 0
-                        ,'background' : 'none repeat scroll 0 0 #E8E9EB'
+                        ,'background' : 'none repeat scroll 0 0 rgba(0, 0, 0, 0)'
                         ,'font' : this.o.fontWeight + ' ' + ((this.w / s) >> 0) + 'px ' + this.o.font
                         ,'text-align' : 'center'
                         ,'color' : this.o.inputColor || this.o.fgColor
