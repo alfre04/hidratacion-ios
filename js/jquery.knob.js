@@ -88,7 +88,7 @@
                 {
                     // Config
                     min : this.$.data('min') !== undefined ? this.$.data('min') : 0,
-                    max : this.$.data('max') !== undefined ? this.$.data('max') : 200,
+                    max : this.$.data('max') !== undefined ? this.$.data('max') : 60,
                     stopper : true,
                     readOnly : this.$.data('readonly') || (this.$.attr('readonly') === 'readonly'),
 
@@ -104,10 +104,10 @@
                     height : this.$.data('height') || 200,
                     displayInput : this.$.data('displayinput') == null || this.$.data('displayinput'),
                     displayPrevious : this.$.data('displayprevious'),
-                    fgColor : this.$.data('fgcolor') || '#87CEEB',
+                    fgColor : this.$.data('fgcolor') || '#d90e15',
                     inputColor: this.$.data('inputcolor'),
-                    font: this.$.data('font') || 'Arial',
-                    fontWeight: this.$.data('font-weight') || 'bold',
+                    font: this.$.data('font') || 'open_sanslight',
+                    fontWeight: this.$.data('font-weight') || 'normal',
                     inline : false,
                     step : this.$.data('step') || 1,
 
@@ -563,14 +563,14 @@
                         mwTimerStop = setTimeout(function() {
                             s.rH(v);
                             mwTimerStop = null;
-                        }, 200);
+                        }, 60);
 
                         // Handle mousewheel releases
                         if(!mwTimerRelease) {
                             mwTimerRelease = setTimeout(function() {
                                 if(mwTimerStop) s.rH(v);
                                 mwTimerRelease = null;
-                            }, 200);
+                            }, 60);
                         }
                     }
                 }
@@ -648,7 +648,7 @@
 
             this.$.val(this.v);
             this.w2 = this.w / 2;
-            this.cursorExt = this.o.cursor / 200;
+            this.cursorExt = this.o.cursor / 60;
             this.xy = this.w2 * this.scale;
             this.lineWidth = this.xy * this.o.thickness;
             this.lineCap = this.o.lineCap;
@@ -683,7 +683,7 @@
                         ,'margin-top' : ((this.w / 3) >> 0) + 'px'
                         ,'margin-left' : '-' + ((this.w * 3 / 4 + 2) >> 0) + 'px'
                         ,'border' : 0
-                        ,'background' : 'none'
+                        ,'background' : 'none repeat scroll 0 0 #E8E9EB'
                         ,'font' : this.o.fontWeight + ' ' + ((this.w / s) >> 0) + 'px ' + this.o.font
                         ,'text-align' : 'center'
                         ,'color' : this.o.inputColor || this.o.fgColor
