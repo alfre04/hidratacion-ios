@@ -232,19 +232,30 @@ h1,h2,h3,h4,h5,h6{
     }
     /******Cuerpo | Hidratación******/
     .cuerpo-hidratacion{
-        .title{
-            font-size: 3.2em;
-            margin-top: 2%;
+        #content{
+            .title{
+                font-size: 3.2em;
+                line-height: 1em;
+                margin-bottom: 0;
+                margin-top: 2.5%;
+            }
+            p{
+                font-size: 0.82em;
+                width: 58%;
+            }
         }
         #tabs{
             .ui-tabs-nav{
                 float: left;
-                list-style: none;
+                list-style: none outside none;
+                margin: 0 0 0 6% !important;
+                width: 94%;
                 li{
                     background: url("../img/font-cuerpo.png");
                     background-size: 100% auto;
                     background-repeat: no-repeat;
                     margin: 0 0.8% 1% 0;
+                    width: 10.6%;
                     img{
                         display: block;
                         margin: 0 auto;
@@ -257,7 +268,7 @@ h1,h2,h3,h4,h5,h6{
                     background-size: 100% auto;
                     background-repeat: no-repeat;
                 }
-                .tab-6{
+                .tab-5{
                     clear: both;
                 }
             }
@@ -267,9 +278,18 @@ h1,h2,h3,h4,h5,h6{
                 background-repeat: repeat;
                 color: #FFFFFF;
                 float: left;
-                margin-top: 4%;
-                padding: 1% 2%;
+                margin: 0;
+                padding: 1% 2% 1% 5%;
                 width: 96%;
+                h2{
+                    font-size: 2.7em;
+                    margin: 0;
+                }
+                p{
+                    line-height: 1.2em;
+                    margin: 0;
+                    width: 61%;
+                }
             }
         }
     }
