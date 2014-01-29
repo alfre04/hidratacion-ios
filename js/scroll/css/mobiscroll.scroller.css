@@ -364,9 +364,7 @@
 }
 /* Backgrounds */
 .dwbg .dwwr {
-    background: #fff;
-    color: #000;
-    font-family: arial, verdana, sans-serif;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 .dwbg .dwv {
     background-color: #dfdfdf;
