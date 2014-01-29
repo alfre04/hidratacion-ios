@@ -33,6 +33,96 @@
     	<script src="js/scroll/mobiscroll.scroller.js" type="text/javascript"></script>
 	<script src="js/scroll/mobiscroll.select.js" type="text/javascript"></script>
 	<link href="js/scroll/css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.knob.js"></script>
+        <script>
+            $(function($) {
+
+                $(".knob").knob({
+                    change : function (value) {
+                        //console.log("change : " + value);
+                    },
+                    release : function (value) {
+                        //console.log(this.$.attr('value'));
+                        console.log("release : " + value);
+                    },
+                    cancel : function () {
+                        console.log("cancel : ", this);
+                    },
+                    draw : function () {
+
+                        // "tron" case
+                        if(this.$.data('skin') == 'tron') {
+
+                            var a = this.angle(this.cv)  // Angle
+                                , sa = this.startAngle          // Previous start angle
+                                , sat = this.startAngle         // Start angle
+                                , ea                            // Previous end angle
+                                , eat = sat + a                 // End angle
+                                , r = 1;
+
+                            this.g.lineWidth = this.lineWidth;
+
+                            this.o.cursor
+                                && (sat = eat - 0.3)
+                                && (eat = eat + 0.3);
+
+                            if (this.o.displayPrevious) {
+                                ea = this.startAngle + this.angle(this.v);
+                                this.o.cursor
+                                    && (sa = ea - 0.3)
+                                    && (ea = ea + 0.3);
+                                this.g.beginPath();
+                                this.g.strokeStyle = this.pColor;
+                                this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false);
+                                this.g.stroke();
+                            }
+
+                            this.g.beginPath();
+                            this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false);
+                            this.g.stroke();
+
+                            this.g.lineWidth = 2;
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.o.fgColor;
+                            this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                            this.g.stroke();
+
+                            return false;
+                        }
+                    }
+                });
+
+                // Example of infinite knob, iPod click wheel
+                var v, up=0,down=0,i=0
+                    ,$idir = $("div.idir")
+                    ,$ival = $("div.ival")
+                    ,incr = function() { i++; $idir.show().html("+").fadeOut(); $ival.html(i); }
+                    ,decr = function() { i--; $idir.show().html("-").fadeOut(); $ival.html(i); };
+                $("input.infinite").knob(
+                                    {
+                                    min : 0
+                                    , max : 20
+                                    , stopper : false
+                                    , change : function () {
+                                                    if(v > this.cv){
+                                                        if(up){
+                                                            decr();
+                                                            up=0;
+                                                        }else{up=1;down=0;}
+                                                    } else {
+                                                        if(v < this.cv){
+                                                            if(down){
+                                                                incr();
+                                                                down=0;
+                                                            }else{down=1;up=0;}
+                                                        }
+                                                    }
+                                                    v = this.cv;
+                                                }
+                                    });
+            });
+        </script>
     </head>
     <body>
         <div data-role="page" id="page-success" data-dom-cache="true">
@@ -292,9 +382,9 @@
 		    
 		    <div id="paso-2" class="pasos">
 			<h2>¿Que ejercicio realizas?</h2>
-			<form>
+			<form class="ejercicio">
 			    <fieldset data-role="controlgroup" data-type="horizontal">
-				<legend>Actividad:</legend>
+				<legend>Elige el tipo de ejercicio</legend>
 				<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="off">
 				<label for="radio-choice-h-2a">Anaeróbico</label>
 				<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off">
@@ -323,6 +413,20 @@
 				</div>
 			    </li>
 			</ul>
+			<div class="tiempo grid">
+			    <input class="knob" data-angleOffset=90 data-linecap=round value="0" />
+			</div>
+			<form class="dias">
+			    <fieldset data-role="controlgroup" data-type="horizontal">
+				<legend>Elige cuantos días de la semana</legend>
+				<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="off">
+				<label for="radio-choice-h-2a">1-2</label>
+				<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off">
+				<label for="radio-choice-h-2b">3-4</label>
+				<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2c" value="off">
+				<label for="radio-choice-h-2c">5 o más</label>
+			    </fieldset>
+			</form>
 		    </div>
 		    
 		    <div id="paso-3" class="pasos">
