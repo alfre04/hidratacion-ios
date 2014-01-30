@@ -31,9 +31,11 @@
         Victor Valverde
     </author>
     
+    <preference name="Fullscreen" value="true" />
     <preference name="orientation" value="landscape" />
     <preference name="DisallowOverscroll" value="false" />
-    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+    
     
     <!--<content src="index.html" />
     <access origin="*" />
