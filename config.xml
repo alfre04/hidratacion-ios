@@ -3,7 +3,7 @@
             xmlns:gap   = "http://phonegap.com/ns/1.0"
             id          = "com.LlorenteCuenca.RevistaUNO"
             versionCode = "10" 
-            version     = "1.0.4" >
+            version     = "1.0.5" >
 
     <name>Hidratacion</name>
     
@@ -24,7 +24,7 @@
     
 
     <description>
-        Esto es una Prueba para la APP de Hidratacion
+        Desarrollo APP de Hidratación
     </description>
 
     <author href="http://www.llorenteycuenca.com" email="vvalverde@llorenteycuenca.com">
