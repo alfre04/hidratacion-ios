@@ -35,7 +35,6 @@
     <preference name="orientation" value="landscape" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="HideKeyboardFormAccessoryBar" value="true"/>
-    <preference name="HideKeyboardFormAccessoryBar" value="true"/>
     <preference name="WebViewBounce" value="true" />
     
     
