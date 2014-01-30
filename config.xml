@@ -32,20 +32,15 @@
     </author>
     
     <preference name="Fullscreen" value="true" />
-    <preference name="BackgroundColor" value="0xFFFFFF"/>
+    <preference name="BackgroundColor" value="0xff0000ff"/>
     <preference name="orientation" value="landscape" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="HideKeyboardFormAccessoryBar" value="true"/>
-    <preference name="WebViewBounce" value="true" />
+    <!--<preference name="WebViewBounce" value="true" />-->
     
     
     <!--<content src="index.html" />
-    <access origin="*" />
-    <preference name="Fullscreen" value="true" />
-    <preference name="DisallowOverscroll" value="true"/>
-    <preference name="BackgroundColor" value="0xff0000ff"/>
-    <preference name="HideKeyboardFormAccessoryBar" value="true"/>
-    <preference name="WebViewBounce" value="true" />-->
+    <access origin="*" />-->
 
 
 </widget>
