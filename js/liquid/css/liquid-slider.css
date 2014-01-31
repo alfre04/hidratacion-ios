@@ -48,11 +48,14 @@
 * Additional media queries are at the bottom of this document
 ******************************************************************/
 .liquid-slider-wrapper {
-  margin:0 auto;
   /* Do not edit below this line */
   clear: both;
   overflow: auto;
   position: relative;
+  /*width: 100% !important;*/
+  left: 0 !important;
+  height: 435px;
+  
 }
 
 /******************************************************
@@ -377,7 +380,8 @@
     */
   }
   .liquid-responsive .liquid-slider .panel .panel-wrapper {
-    padding: 20px 35px;
+    float: left;
+    padding: 0;
   }
 }
 
