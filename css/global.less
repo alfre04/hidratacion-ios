@@ -242,51 +242,59 @@ h1,h2,h3,h4,h5,h6{
                 width: 58%;
             }
         }
-        #tabs{
-            .ui-tabs-nav{
-                float: left;
-                list-style: none outside none;
-                margin: 0 0 0 6% !important;
-                width: 94%;
-                li{
-                    background: url("../img/font-cuerpo.png");
-                    background-size: 100% auto;
-                    background-repeat: no-repeat;
-                    margin: 0 0.8% 1% 0;
-                    width: 10.6%;
-                    img{
-                        display: block;
-                        margin: 0 auto;
-                        padding: 5% 5% 10%;
-                        width: 90%;
+        #slider-id-wrapper{
+            h2.title{
+                display: none;
+            }
+            .liquid-nav{
+                bottom: 0;
+                position: absolute;
+            }
+            #tabs{
+                .ui-tabs-nav{
+                    float: left;
+                    list-style: none outside none;
+                    margin: 0 0 0 6% !important;
+                    width: 94%;
+                    li{
+                        background: url("../img/font-cuerpo.png");
+                        background-size: 100% auto;
+                        background-repeat: no-repeat;
+                        margin: 0 0.8% 1% 0;
+                        width: 10.6%;
+                        img{
+                            display: block;
+                            margin: 0 auto;
+                            padding: 5% 5% 10%;
+                            width: 90%;
+                        }
+                    }
+                    li.ui-tabs-active{
+                        background: url("../img/font-cuerpo-hover.png");
+                        background-size: 100% auto;
+                        background-repeat: no-repeat;
+                    }
+                    .tab-5{
+                        clear: both;
                     }
                 }
-                li.ui-tabs-active{
-                    background: url("../img/font-cuerpo-hover.png");
-                    background-size: 100% auto;
-                    background-repeat: no-repeat;
-                }
-                .tab-5{
-                    clear: both;
-                }
-            }
-            
-            .ui-tabs-panel{
-                background-image: url("../img/font-dinamico.png");
-                background-repeat: repeat;
-                color: #FFFFFF;
-                float: left;
-                margin: 0;
-                padding: 1% 2% 1% 5%;
-                width: 96%;
-                h2{
-                    font-size: 2.7em;
+                .ui-tabs-panel{
+                    background-image: url("../img/font-dinamico.png");
+                    background-repeat: repeat;
+                    color: #FFFFFF;
+                    float: left;
                     margin: 0;
-                }
-                p{
-                    line-height: 1.2em;
-                    margin: 0;
-                    width: 61%;
+                    padding: 1% 2% 1% 5%;
+                    width: 96%;
+                    h2{
+                        font-size: 2.7em;
+                        margin: 0;
+                    }
+                    p{
+                        line-height: 1.2em;
+                        margin: 0;
+                        width: 61%;
+                    }
                 }
             }
         }
