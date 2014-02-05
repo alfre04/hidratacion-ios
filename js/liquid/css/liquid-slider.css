@@ -50,7 +50,7 @@
 .liquid-slider-wrapper {
   /* Do not edit below this line */
   clear: both;
-  height: 650px;
+  height: 670px;
   left: 0 !important;
   max-width: 100% !important;
   overflow: auto;
@@ -302,7 +302,7 @@
 *******************************************************/
 .liquid-responsive .liquid-slider {
   /* Do not edit below this line */
-  height: 650px !important;
+  height: 670px !important;
   margin: 0;
   width: 100%;
 }
