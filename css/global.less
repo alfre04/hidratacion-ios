@@ -78,111 +78,24 @@ h1,h2,h3,h4,h5,h6{
                 }
             }
         }
-        #paso-1{
-            h2{
-                background: url("../img/pleca-calculadora1.png");
-                background-size: 10% auto;
-                background-repeat: no-repeat;
-                padding-bottom: 2%;
-                padding-left: 14%;
-            }
-            .ui-controlgroup-controls{
-                float: left;
-                width: 100%;
-                .ui-radio{
-                    width: 44%;
+        form{
+            #paso-1{
+                h2{
+                    background: url("../img/pleca-calculadora1.png");
+                    background-size: 10% auto;
+                    background-repeat: no-repeat;
+                    padding-bottom: 2%;
+                    padding-left: 14%;
                 }
-                .ui-checkbox .ui-btn, .ui-radio .ui-btn{
-                    background: none repeat scroll 0 0 #F0F0F0;
-                    border-bottom: 2px solid #CECCCC;
-                    padding: 10% 0;
-                    text-align: center;
-                }
-                .ui-radio-on{
-                    background: #3d3c3c !important;
-                    color: #FFFFFF !important;
-                }
-            }
-            .ui-select{
-                float: left;
-                width: 35%;
-            }
-        }
-        #paso-2{
-            margin: 0 2%;
-            h2{
-                background: url("../img/pleca-calculadora2.png");
-                background-size: 10% auto;
-                background-repeat: no-repeat;
-                padding-bottom: 2%;
-                padding-left: 14%;
-            }
-            form.ejercicio{
-                float: left;
-                width: 75%;
-                .ui-radio{
-                    margin-bottom: 1%;
-                    width: 100%;
-                }
-                .ui-checkbox .ui-btn, .ui-radio .ui-btn{
-                    background: none repeat scroll 0 0 #F0F0F0;
-                    border-bottom: 2px solid #cecccc;
-                    display: block;
-                    padding: 5%;
-                }
-                .ui-radio-on{
-                    background: #3d3c3c !important;
-                    color: #FFFFFF !important;
-                }
-            }
-            ul{
-                float: left;
-                list-style: none outside none;
-                margin-left: 4%;
-                margin-top: 13%;
-                padding: 0;
-                width: 20%;
-                li{
-                    padding-bottom: 13%;
-                    padding-left: 8%;
-                    width: 60%;
-                }
-            }
-            .tiempo{
-                p{
-                    margin-bottom: 0;
-                }
-                canvas{
-                    border: 5px solid #D7D8DB;
-                    border-radius: 120px;
-                    box-shadow: 0 0 2px 5px #C7C9CB;
-                }
-                .ui-input-text{
-                    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-                    border: medium none;
-                    box-shadow: none;
-                    margin-left: 16%;
-                    input{
-                        border-radius: 75px;
-                        margin: 30% 0 0 17% !important;
-                        top: 0 !important;
-                    }
-                }
-            }
-            form.dias{
-                float: left;
-                width: 100%;
                 .ui-controlgroup-controls{
                     float: left;
                     width: 100%;
                     .ui-radio{
-                        margin-bottom: 1%;
-                        width: 33%;
+                        width: 44%;
                     }
                     .ui-checkbox .ui-btn, .ui-radio .ui-btn{
                         background: none repeat scroll 0 0 #F0F0F0;
                         border-bottom: 2px solid #CECCCC;
-                        display: block;
                         padding: 10% 0;
                         text-align: center;
                     }
@@ -191,39 +104,142 @@ h1,h2,h3,h4,h5,h6{
                         color: #FFFFFF !important;
                     }
                 }
+                .ui-select{
+                    float: left;
+                    width: 35%;
+                }
             }
-        }
-        #paso-3{
-            h2{
-                background: url("../img/pleca-calculadora3.png");
-                background-size: 10% auto;
-                background-repeat: no-repeat;
-                padding-bottom: 2%;
-                padding-left: 14%;
+            #paso-2{
+                margin: 0 2%;
+                h2{
+                    background: url("../img/pleca-calculadora2.png");
+                    background-size: 10% auto;
+                    background-repeat: no-repeat;
+                    padding-bottom: 2%;
+                    padding-left: 14%;
+                }
+                fieldset.ejercicio{
+                    float: left;
+                    width: 75%;
+                    .ui-radio{
+                        margin-bottom: 1%;
+                        width: 100%;
+                    }
+                    .ui-checkbox .ui-btn, .ui-radio .ui-btn{
+                        background: none repeat scroll 0 0 #F0F0F0;
+                        border-bottom: 2px solid #cecccc;
+                        display: block;
+                        padding: 5%;
+                    }
+                    .ui-radio-on{
+                        background: #3d3c3c !important;
+                        color: #FFFFFF !important;
+                    }
+                }
+                ul{
+                    float: left;
+                    list-style: none outside none;
+                    margin-left: 4%;
+                    margin-top: 13%;
+                    padding: 0;
+                    width: 20%;
+                    li{
+                        padding-bottom: 13%;
+                        padding-left: 8%;
+                        width: 60%;
+                    }
+                }
+                .tiempo{
+                    p{
+                        margin-bottom: 0;
+                    }
+                    canvas{
+                        border: 5px solid #D7D8DB;
+                        border-radius: 120px;
+                        box-shadow: 0 0 2px 5px #C7C9CB;
+                    }
+                    .ui-input-text{
+                        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+                        border: medium none;
+                        box-shadow: none;
+                        margin-left: 16%;
+                        input{
+                            border-radius: 75px;
+                            margin: 30% 0 0 17% !important;
+                            top: 0 !important;
+                        }
+                    }
+                }
+                fieldset.dias{
+                    float: left;
+                    width: 100%;
+                    .ui-controlgroup-controls{
+                        float: left;
+                        width: 100%;
+                        .ui-radio{
+                            margin-bottom: 1%;
+                            width: 33%;
+                        }
+                        .ui-checkbox .ui-btn, .ui-radio .ui-btn{
+                            background: none repeat scroll 0 0 #F0F0F0;
+                            border-bottom: 2px solid #CECCCC;
+                            display: block;
+                            padding: 10% 0;
+                            text-align: center;
+                        }
+                        .ui-radio-on{
+                            background: #3d3c3c !important;
+                            color: #FFFFFF !important;
+                        }
+                    }
+                }
             }
-            p{
-                text-align: center;
-            }
-            .litros{
-                background: none repeat scroll 0 0 #E61D2B;
-                border-radius: 155px;
-                color: #FFFFFF;
-                font-size: 2em;
-                margin-left: 20%;
-                padding: 12%;
-                width: 29%;
-            }
-            .pregunta{
-                a{
-                    background: none repeat scroll 0 0 #F0F0F0;
-                    border-bottom: 2px solid #CECCCC;
-                    color: #201F1F;
-                    display: block;
+            #paso-3{
+                h2{
+                    background: url("../img/pleca-calculadora3.png");
+                    background-size: 10% auto;
+                    background-repeat: no-repeat;
+                    padding-bottom: 2%;
+                    padding-left: 14%;
+                }
+                p{
+                    text-align: center;
+                }
+                .litros{
+                    background: none repeat scroll 0 0 #E61D2B;
+                    border-radius: 155px;
+                    color: #FFFFFF;
+                    font-size: 2em;
                     margin-left: 20%;
-                    padding: 5%;
-                    text-align: left;
-                    text-decoration: none;
-                    width: 50%;
+                    padding: 12%;
+                    width: 29%;
+                    .ui-input-text{
+                        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+                        border: medium none;
+                        box-shadow: none;
+                        color: #FFFFFF;
+                        margin: 0;
+                        opacity: 1;
+                        #pago{
+                            font-size: 2em;
+                            min-height: 0;
+                            padding: 0;
+                            text-align: center;
+                        }
+                    }
+                }
+                .pregunta{
+                    a{
+                        background: none repeat scroll 0 0 #F0F0F0;
+                        border-bottom: 2px solid #CECCCC;
+                        color: #201F1F;
+                        display: block;
+                        margin-left: 20%;
+                        padding: 5%;
+                        text-align: left;
+                        text-decoration: none;
+                        width: 50%;
+                    }
                 }
             }
         }
@@ -231,6 +247,8 @@ h1,h2,h3,h4,h5,h6{
     /******Cuerpo | Hidratación******/
     .cuerpo-hidratacion{
         #content{
+            margin: 0;
+            width: 100%;
             .title{
                 font-size: 3.2em;
                 line-height: 1em;
@@ -240,6 +258,9 @@ h1,h2,h3,h4,h5,h6{
             p{
                 font-size: 0.82em;
                 width: 63%;
+            }
+            .back{
+                top: -10%;
             }
         }
         #slider-id-wrapper{
@@ -253,6 +274,7 @@ h1,h2,h3,h4,h5,h6{
                 bottom: 0;
                 position: absolute;
                 width: 100%;
+                z-index: 1;
                 #slider-id-nav-ul{
                     display: block !important;
                     width: 100%;
