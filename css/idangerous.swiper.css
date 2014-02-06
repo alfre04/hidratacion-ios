@@ -67,7 +67,6 @@ Basic Swiper Styles
 }
 .swiper-slide {
 	float: left;
-	margin-top: 0.5%;
 }
 
 /* IE10 Windows Phone 8 Fixes */
@@ -98,7 +97,7 @@ sizes, pagination, etc.
 	/* Specific active slide styling: */
 	
 }
-.swiper-slide-visible {
+.swiper-slide-active {
 	/* Specific visible slide styling: */	
 
 }
@@ -116,34 +115,4 @@ Pagination Styles
 .swiper-visible-switch {
 	/* Specific visible button style: */	
 	
-}
-
-/* Demo Styles */
-.swiper-container {
-  width: 1500px;
-  height: 680px;
-}
-.swiper-slide {
-  width: 500px;
-  height: 100%;
-}
-.pagination {
-	margin-left: 10%;
-	width: 90%;
-	z-index: 20;
-}
-.swiper-pagination-switch {
-	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-	cursor: pointer;
-	display: inline-block;
-	height: 135px;
-	margin-right: 2.5%;
-	opacity: 0.8;
-	width: 8%;
-}
-.swiper-visible-switch {
-	background: #aaa;
-}
-.swiper-active-switch {
-	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }

@@ -48,8 +48,18 @@
 			</div>
 		    </div>
 		    <div id="content" class="grid">
-			<div class="swiper-container">
-			    <div class="pagination"></div>
+			<div class="swiper-nav swiper-container">
+			    <div class="swiper-wrapper">
+				<div class="swiper-slide"><span>Home</span></div>
+				<div class="swiper-slide"><span>About Us</span></div>
+				<div class="swiper-slide"><span>Gallery</span></div>
+				<div class="swiper-slide"><span>Services</span></div>
+				<div class="swiper-slide"><span>Contacts</span></div>
+				<div class="swiper-slide"><span>Pex</span></div>
+			    </div>
+			</div>
+			<div class="swiper-pages swiper-container">
+			    <!--<div class="pagination"></div>-->
 			    <div class="swiper-wrapper">
 				<div class="swiper-slide">
 				    <div class="contenido-slide">
@@ -161,17 +171,14 @@
 				</div>
 			    </div>
 			</div>
-			<div class="image-pagination">
+			<!--<div class="image-pagination">
 			    <img src="img/pag-te.png" />
-			</div>
-			<script src="js/idangerous.swiper-2.1.min.js"></script>
-			<script>
-			    var mySwiper = new Swiper('.swiper-container',{
-			    pagination: '.pagination',
-			    paginationClickable: true,
-			    moveStartThreshold: 100
-			    })
-			</script>
+			</div>-->
+			<link rel="stylesheet" href="css/idangerous.swiper.css">
+			<!-- Don't forget to get the latest Swiper and scrollbar version here-->
+			<script src="js/idangerous.swiper-2.0.min.js"></script>
+			<!--<script src="js/idangerous.swiper.scrollbar-2.0.js"></script>-->
+			<script src="js/simple-app.js"></script>
 		    </div>
 		</div>
 	    </div>
