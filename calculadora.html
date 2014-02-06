@@ -125,14 +125,17 @@
             });
         </script>
 	<script type="text/javascript">
-	    function Suma2(isChecked, valor){
-		if (isChecked) {
-		    siniva2 = (parseFloat(document.sumar2.totalsiniva2.value) + parseFloat(valor)).toFixed(2);
-		} else {
-		    siniva2 = (parseFloat(document.sumar2.totalsiniva2.value) - parseFloat(valor)).toFixed(2);
-		}
-	    document.sumar2.totalsiniva2.value = siniva2;
-	    document.sumar2.total2.value =  parseFloat(siniva2).toFixed(2);
+	    var valor1 = 0;
+	    var valor2 = 0;
+	    //var valor3 = 0;
+	    function sumar(radio) {
+		var valor = parseFloat(radio.value);
+		if (radio.name == "sexo")
+		    valor1 = parseFloat (valor);      
+		else
+		    valor2 = parseFloat (valor);
+		    //valor3 = parseFloat (valor);
+	      document.getElementById("resultado").value = parseFloat (valor1 + valor2) .toFixed(2);
 	    }
 	</script>
     </head>
@@ -154,15 +157,15 @@
 			</div>
 		    </div>
 		    <div id="content" class="grid" style="margin: 0px 2%; width: 96%;">
-			<form name="sumar2" method="POST">
+			<form id="form1" name="form1" method="post" action="">
 			    <div id="paso-1" class="pasos">
 				<h2>Introdice tus datos</h2>
 				<fieldset data-role="controlgroup" data-type="horizontal">
 				    <legend>Sexo:</legend>
-				    <input type="radio" name="sexo" id="radio_1" value="0.1" onClick="Suma2(this.checked,this.value)" />
-				    <label for="radio_1">Femenino</label>
-				    <input type="radio" name="sexo" id="radio_2" value="0.2" onClick="Suma2(this.checked,this.value)" />
-				    <label for="radio_2">Masculino</label>
+				    <input type="radio" name="sexo" id="RadioGroup1_0" value="0.1" onclick="sumar(this);"  />
+				    <label for="RadioGroup1_0">Femenino</label>
+				    <input type="radio" name="sexo" id="RadioGroup1_1" value="0.2" onclick="sumar(this);"  />
+				    <label for="RadioGroup1_1">Masculino</label>
 				</fieldset>
 				<select onClick="Suma2(this.checked,this.value)" name="Edad" id="age" >
 				    <option value="50">0</option>
@@ -400,12 +403,12 @@
 				<h2>¿Que ejercicio realizas?</h2>
 				<fieldset class="ejercicio" data-role="controlgroup" data-type="horizontal">
 				    <legend>Elige el tipo de ejercicio</legend>
-				    <input type="radio" name="ejercicio" id="radio_3" value="0.2" onClick="Suma2(this.checked,this.value)" />
-				    <label for="radio_3">Anaeróbico</label>
-				    <input type="radio" name="ejercicio" id="radio_4" value="0.4" onClick="Suma2(this.checked,this.value)" />
-				    <label for="radio_4">Medianamente aeróbico</label>
-				    <input type="radio" name="ejercicio" id="radio_5" value="0.6" onClick="Suma2(this.checked,this.value)" />
-				    <label for="radio_5">Aeróbico</label>
+				    <input type="radio" name="ejercicio" id="RadioGroup2_0" value="0.2" onclick="sumar(this);" />
+				    <label for="RadioGroup2_0">Anaeróbico</label>
+				    <input type="radio" name="ejercicio" id="RadioGroup2_1" value="0.4" onclick="sumar(this);" />
+				    <label for="RadioGroup2_1">Medianamente aeróbico</label>
+				    <input type="radio" name="ejercicio" id="RadioGroup2_2" value="0.6" onclick="sumar(this);" />
+				    <label for="RadioGroup2_2">Aeróbico</label>
 				</fieldset>
 				
 				<ul>
@@ -430,7 +433,7 @@
 				</ul>
 				<div class="tiempo grid">
 				    <p>Tiempo</p>
-				    <input name="tiempo" id="radio_10" class="knob" data-angleOffset=90 data-linecap=round value="0" onClick="Suma2(this.checked,this.value)" />
+				    <input name="tiempo" id="radio_10" class="knob" data-angleOffset=0 data-linecap=round value="0" onClick="Suma2(this.checked,this.value)" />
 				</div>
 				
 				<fieldset class="dias" data-role="controlgroup" data-type="horizontal">
@@ -453,8 +456,9 @@
 				    +2.01 ejercicio
 				</p>
 				<p class="litros">
-				    <input type="hidden" value="0.00" id="totalsiniva2" name="totalsiniva2" />    
-				    <input id="pago" class="resultado" type="text" id="total2" name="total2" value="0" disabled />
+				    <!--<input type="hidden" value="0.00" id="totalsiniva2" name="totalsiniva2" />    
+				    <input id="pago" class="resultado" type="text" id="total2" name="total2" value="0" disabled />-->
+				    <input type="text" name="resultado" id="resultado" disabled="disabled" value="0" />
 				    litros
 				</p>
 				
