@@ -250,9 +250,9 @@ h1,h2,h3,h4,h5,h6{
         #content{
             margin: 0;
             width: 100%;
-            .back{
-                top: -12%;
-            }
+            //.back{
+            //    top: -12%;
+            //}
             .contenido{
                 margin-left: 7%;
                 width: 93%;
@@ -268,31 +268,14 @@ h1,h2,h3,h4,h5,h6{
                 }
             }
         }
-        #slider-id-wrapper{
-            h2.title{
-                display: none;
-            }
-            .liquid-slider-select-box{
-                display: none !important;
-            }
-            .liquid-nav{
-                bottom: 0;
-                position: absolute;
-                width: 100%;
-                z-index: 1;
-                #slider-id-nav-ul{
-                    display: block !important;
-                    width: 100%;
-                    li{
-                        float: left;
-                        width: 25%;
-                        a{
-                            text-align: center;
-                            width: 100%;
-                        }
-                    }
-                }
-            }
+        .swiper-nav{
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+        .swiper-slide{
+            position: relative;
             #tabs{
                 .ui-tabs-nav{
                     float: left;

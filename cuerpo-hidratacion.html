@@ -28,39 +28,6 @@
         <link rel="stylesheet" href="js/jquerymobile/css/jquery.mobile-1.4.0.css">
 	<script src="js/jquerymobile/jquery.js"></script>
 	<script src="js/jquerymobile/jquery.mobile-1.4.0.min.js"></script>
-	<link rel="stylesheet" type="text/css" media="screen" href="js/liquid/css/liquid-slider.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<!-- Liquid Slider relies on jQuery and easing effects-->
-	<script src="js/liquid/jquery.easing.1.3.js"></script>
-	<!-- Optional code for enabling touch -->
-	<script src="js/liquid/jquery.touchSwipe.min.js"></script>
-	<!-- This is Liquid Slider code. The full version (not .min) is also included in the js directory -->
-	<script src="js/liquid/jquery.liquid-slider.min.js"></script>
-	<script>
-	    $(function(){
-		/* Here is the slider using default settings */
-		$('#slider-id').liquidSlider();
-	  
-	  
-		/* If you want to adjust the settings, you set an option
-		   as follows:
-	  
-		    $('#slider-id').liquidSlider({
-		      autoSlide:false,
-		      autoHeight:false
-		    });
-	  
-		   Find more options at http://liquidslider.kevinbatdorf.com/
-		*/
-	  
-		/* If you need to access the internal property or methods, use this:
-	  
-		var sliderObject = $.data( $('#slider-id')[0], 'liquidSlider');
-		console.log(sliderObject);
-	  
-		*/
-	    });
-	</script> 
     </head>
     <body>
         <div data-role="page" id="page-success" data-dom-cache="true">
@@ -77,421 +44,139 @@
 			</div>
 		    </div>
 		    <div id="content" class="grid">
-			<div class="liquid-slider"  id="slider-id">
-			    <div>
-          <h2 class="title">Slide 1</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. Sed consectetur elit id mi consectetur bibendum. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis. Aliquam sit amet purus lectus. Maecenas tempor ornare sollicitudin.</p>
-        </div>
-        <div>
-          <h2 class="title">Slide 2</h2>
-          <p>Proin nec turpis eget dolor dictum lacinia. Nullam nunc magna, tincidunt eu porta in, faucibus sed magna. Suspendisse laoreet ornare ullamcorper. Nulla in tortor nibh. Pellentesque sed est vitae odio vestibulum aliquet in nec leo.</p>
-        </div>          
-        <div>
-          <h2 class="title">Slide 3</h2>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-        </div>
-        <div>
-          <h2 class="title">Slide 4</h2>
-          <p>Proin nec turpis eget dolor dictum lacinia. Nullam nunc magna, tincidunt eu porta in, faucibus sed magna. Suspendisse laoreet ornare ullamcorper. Nulla in tortor nibh. Pellentesque sed est vitae odio vestibulum aliquet in nec leo.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. Sed consectetur elit id mi consectetur bibendum. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis. Aliquam sit amet purus lectus. Maecenas tempor ornare sollicitudin.</p>
-        </div>
-			    <!--<div>
-				<div data-role="tabs" id="tabs">
-				    <div class="back">
-					<img src="img/cuerpo-hidratacion.jpg" class="adaptive-background" />
-				    </div>
-				    <div class="contenido">
-					<h1 class="title">Cuerpo e<br />
-					    <span style="padding-left: 15%;">Hidratación</span>
-					</h1>
-					<p>
-					    Gran parte de nuestro cuerpo está compuesto de agua. Además de ello, el agua es muy importante en el transporte y en la absorción de nutrimentos, contribuye en la eliminación de toxinas, lubrica y protege articulaciones, ayuda a que los músculos trabajen correctamente, a conservar la elasticidad y suavidad de la piel, normaliza la presión sanguínea y ayuda al cerebro a realizar correctamente funciones como la memoria y la concentración a corto plazo.
-					</p>
-				    </div>
-				    <h2 class="title">Cuerpo e Hidratación</h2>
-				    <div data-role="navbar">
-					<ul>
-					    <li id="tab-1">
-						<a href="#tabs-1" data-ajax="false"><img src="img/celulas.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-2" data-ajax="false"><img src="img/rinones.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-3" data-ajax="false"><img src="img/piel.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-4" data-ajax="false"><img src="img/temperatura.png" /></a>
-					    </li>
-					    <li id="last" class="tab-5">
-						<a href="#tabs-5" data-ajax="false"><img src="img/cerebro.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-6" data-ajax="false"><img src="img/corazon.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-7" data-ajax="false"><img src="img/estomago.png" /></a>
-					    </li>
-					    <li id="last">
-						<a href="#tabs-8" data-ajax="false"><img src="img/muscle.png" /></a>
-					    </li>
-					</ul>
-				    </div>
-				    <div id="tabs-1" class="ui-body-d ui-content">
-					<h2>Células</h2>
-					<p>
-					    ¿Alguna vez te has preguntado cómo llegan a su destino los nutrimentos provenientes de los alimentos y bebidas que ingieres? El agua en tu organismo es crucial para transportar a tus células los hidratos de carbono, vitaminas y nutrimentos inorgánicos, así como otros nutrimentos importantes. De esa manera, las células están en capacidad de producir la energía que te permite mantenerte activo.
-					</p>
-				    </div>
-		
-				    <div id="tabs-2" class="ui-body-d ui-content">
-					<h2>Riñones</h2>
-					<p>
-					    El agua es esencial para los riñones; les ayuda a remover desechos, toxinas y nutrimentos en exceso del cuerpo. Los riñones de una persona bien hidratada y saludable filtran aproximadamente 180 litros de líquido diariamente.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-3" class="ui-body-d ui-content">
-					<h2>Piel</h2>
-					<p>
-					    Una buena hidratación conserva la elasticidad de la piel, su suavidad y coloración. El agua limpia las células de la piel por dentro y por fuera.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-4" class="ui-body-d ui-content">
-					<h2>Temperatura</h2>
-					<p>
-					    Tal vez ya sabes que el sudor es el mecanismo que le permite a tu cuerpo equilibrar su temperatura. Pero, ¿sabías que el agua ayuda a que esto sea posible? El líquido de tu organismo contribuye a disipar el calor, regulando tu temperatura corporal general. Cuando tu cuerpo se calienta demasiado, el agua se libera por medio de la sudoración, eliminando así el calor del cuerpo. Si el agua que se pierde a través del sudor no se repone, el cuerpo se puede calentar en extremo, lo cual resulta peligroso.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-5" class="ui-body-d ui-content">
-					<h2>Cerebro</h2>
-					<p>
-					    La hidratación adecuada es importante para el funcionamiento apropiado de tu cerebro. Una ligera deshidratación, tan pequeña como 1 a 2% de peso corporal por deficiencia de líquido, puede deteriorar tu capacidad de concentración. Y la pérdida de más de 2% de peso corporal por deshidratación puede afectar las capacidades de proceso de tu cerebro y mermar la memoria de corto plazo.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-6" class="ui-body-d ui-content">
-					<h2>Corazón</h2>
-					<p>
-					    Los líquidos son importantes para el funcionamiento de un corazón saludable y desempeñan un papel en la normalización de la presión arterial. La deshidratación disminuye el gasto cardiaco, lo cual puede causar un incremento de la frecuencia cardiaca y una reducción de la presión arterial.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-7" class="ui-body-d ui-content">
-					<h2>Tracto Digestivo</h2>
-					<p>
-					    El agua contribuye al proceso de digestión de tus alimentos; se le encuentra en casi todo el tracto digestivo, desde la saliva en tu boca hasta la solución de enzimas en el último tramo de tu intestino. El agua ayuda también a disolver los nutrimentos para que puedan ser absorbidos en tu torrente sanguíneo y distribuidos en tus células.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-8" class="ui-body-d ui-content">
-					<h2>Músculo y Articulaciones</h2>
-					<p>
-					    Tus músculos y articulaciones, además de tu esqueleto, te permiten mantenerte de pie, sentarte, moverte, desarrollar tu vida cotidiana. El agua ayuda a proteger las articulaciones y mantiene el apropiado funcionamiento de los músculos. De hecho, aproximadamente de 70 al 75% de tus músculos están compuestos de agua.
-					</p>
-				    </div>
-				</div>
+			<div class="swiper-nav swiper-container">
+			    <div class="swiper-wrapper">
+				<div class="swiper-slide"><span>Home</span></div>
+				<div class="swiper-slide"><span>About Us</span></div>
 			    </div>
-			    <div>
-				<div data-role="tabs" id="tabs">
-				    <div class="back">
-					<img src="img/cuerpo-hidratacion.jpg" class="adaptive-background" />
-				    </div>
-				    <div class="contenido">
-					<h1 class="title">Cuerpo e<br />
-					    <span style="padding-left: 15%;">Hidratación</span>
-					</h1>
-					<p>
-					    Gran parte de nuestro cuerpo está compuesto de agua. Además de ello, el agua es muy importante en el transporte y en la absorción de nutrimentos, contribuye en la eliminación de toxinas, lubrica y protege articulaciones, ayuda a que los músculos trabajen correctamente, a conservar la elasticidad y suavidad de la piel, normaliza la presión sanguínea y ayuda al cerebro a realizar correctamente funciones como la memoria y la concentración a corto plazo.
-					</p>
-				    </div>
-				    <h2 class="title">Consejos</h2>
-				    <div data-role="navbar">
-					<ul>
-					    <li id="tab-1">
-						<a href="#tabs-1" data-ajax="false"><img src="img/celulas.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-2" data-ajax="false"><img src="img/rinones.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-3" data-ajax="false"><img src="img/piel.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-4" data-ajax="false"><img src="img/temperatura.png" /></a>
-					    </li>
-					    <li id="last" class="tab-5">
-						<a href="#tabs-5" data-ajax="false"><img src="img/cerebro.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-6" data-ajax="false"><img src="img/corazon.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-7" data-ajax="false"><img src="img/estomago.png" /></a>
-					    </li>
-					    <li id="last">
-						<a href="#tabs-8" data-ajax="false"><img src="img/muscle.png" /></a>
-					    </li>
-					</ul>
-				    </div>
-				    <div id="tabs-1" class="ui-body-d ui-content">
-					<h2>Células</h2>
-					<p>
-					    ¿Alguna vez te has preguntado cómo llegan a su destino los nutrimentos provenientes de los alimentos y bebidas que ingieres? El agua en tu organismo es crucial para transportar a tus células los hidratos de carbono, vitaminas y nutrimentos inorgánicos, así como otros nutrimentos importantes. De esa manera, las células están en capacidad de producir la energía que te permite mantenerte activo.
-					</p>
-				    </div>
-		
-				    <div id="tabs-2" class="ui-body-d ui-content">
-					<h2>Riñones</h2>
-					<p>
-					    El agua es esencial para los riñones; les ayuda a remover desechos, toxinas y nutrimentos en exceso del cuerpo. Los riñones de una persona bien hidratada y saludable filtran aproximadamente 180 litros de líquido diariamente.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-3" class="ui-body-d ui-content">
-					<h2>Piel</h2>
-					<p>
-					    Una buena hidratación conserva la elasticidad de la piel, su suavidad y coloración. El agua limpia las células de la piel por dentro y por fuera.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-4" class="ui-body-d ui-content">
-					<h2>Temperatura</h2>
-					<p>
-					    Tal vez ya sabes que el sudor es el mecanismo que le permite a tu cuerpo equilibrar su temperatura. Pero, ¿sabías que el agua ayuda a que esto sea posible? El líquido de tu organismo contribuye a disipar el calor, regulando tu temperatura corporal general. Cuando tu cuerpo se calienta demasiado, el agua se libera por medio de la sudoración, eliminando así el calor del cuerpo. Si el agua que se pierde a través del sudor no se repone, el cuerpo se puede calentar en extremo, lo cual resulta peligroso.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-5" class="ui-body-d ui-content">
-					<h2>Cerebro</h2>
-					<p>
-					    La hidratación adecuada es importante para el funcionamiento apropiado de tu cerebro. Una ligera deshidratación, tan pequeña como 1 a 2% de peso corporal por deficiencia de líquido, puede deteriorar tu capacidad de concentración. Y la pérdida de más de 2% de peso corporal por deshidratación puede afectar las capacidades de proceso de tu cerebro y mermar la memoria de corto plazo.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-6" class="ui-body-d ui-content">
-					<h2>Corazón</h2>
-					<p>
-					    Los líquidos son importantes para el funcionamiento de un corazón saludable y desempeñan un papel en la normalización de la presión arterial. La deshidratación disminuye el gasto cardiaco, lo cual puede causar un incremento de la frecuencia cardiaca y una reducción de la presión arterial.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-7" class="ui-body-d ui-content">
-					<h2>Tracto Digestivo</h2>
-					<p>
-					    El agua contribuye al proceso de digestión de tus alimentos; se le encuentra en casi todo el tracto digestivo, desde la saliva en tu boca hasta la solución de enzimas en el último tramo de tu intestino. El agua ayuda también a disolver los nutrimentos para que puedan ser absorbidos en tu torrente sanguíneo y distribuidos en tus células.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-8" class="ui-body-d ui-content">
-					<h2>Músculo y Articulaciones</h2>
-					<p>
-					    Tus músculos y articulaciones, además de tu esqueleto, te permiten mantenerte de pie, sentarte, moverte, desarrollar tu vida cotidiana. El agua ayuda a proteger las articulaciones y mantiene el apropiado funcionamiento de los músculos. De hecho, aproximadamente de 70 al 75% de tus músculos están compuestos de agua.
-					</p>
-				    </div>
-				</div>
-			    </div>
-			    <div>
-				<div data-role="tabs" id="tabs">
-				    <div class="back">
-					<img src="img/cuerpo-hidratacion.jpg" class="adaptive-background" />
-				    </div>
-				    <div class="contenido">
-					<h1 class="title">Cuerpo e<br />
-					    <span style="padding-left: 15%;">Hidratación</span>
-					</h1>
-					<p>
-					    Gran parte de nuestro cuerpo está compuesto de agua. Además de ello, el agua es muy importante en el transporte y en la absorción de nutrimentos, contribuye en la eliminación de toxinas, lubrica y protege articulaciones, ayuda a que los músculos trabajen correctamente, a conservar la elasticidad y suavidad de la piel, normaliza la presión sanguínea y ayuda al cerebro a realizar correctamente funciones como la memoria y la concentración a corto plazo.
-					</p>
-				    </div>
-				    <h2 class="title">Hidratación en niños</h2>
-				    <div data-role="navbar">
-					<ul>
-					    <li id="tab-1">
-						<a href="#tabs-1" data-ajax="false"><img src="img/celulas.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-2" data-ajax="false"><img src="img/rinones.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-3" data-ajax="false"><img src="img/piel.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-4" data-ajax="false"><img src="img/temperatura.png" /></a>
-					    </li>
-					    <li id="last" class="tab-5">
-						<a href="#tabs-5" data-ajax="false"><img src="img/cerebro.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-6" data-ajax="false"><img src="img/corazon.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-7" data-ajax="false"><img src="img/estomago.png" /></a>
-					    </li>
-					    <li id="last">
-						<a href="#tabs-8" data-ajax="false"><img src="img/muscle.png" /></a>
-					    </li>
-					</ul>
-				    </div>
-				    <div id="tabs-1" class="ui-body-d ui-content">
-					<h2>Células</h2>
-					<p>
-					    ¿Alguna vez te has preguntado cómo llegan a su destino los nutrimentos provenientes de los alimentos y bebidas que ingieres? El agua en tu organismo es crucial para transportar a tus células los hidratos de carbono, vitaminas y nutrimentos inorgánicos, así como otros nutrimentos importantes. De esa manera, las células están en capacidad de producir la energía que te permite mantenerte activo.
-					</p>
-				    </div>
-		
-				    <div id="tabs-2" class="ui-body-d ui-content">
-					<h2>Riñones</h2>
-					<p>
-					    El agua es esencial para los riñones; les ayuda a remover desechos, toxinas y nutrimentos en exceso del cuerpo. Los riñones de una persona bien hidratada y saludable filtran aproximadamente 180 litros de líquido diariamente.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-3" class="ui-body-d ui-content">
-					<h2>Piel</h2>
-					<p>
-					    Una buena hidratación conserva la elasticidad de la piel, su suavidad y coloración. El agua limpia las células de la piel por dentro y por fuera.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-4" class="ui-body-d ui-content">
-					<h2>Temperatura</h2>
-					<p>
-					    Tal vez ya sabes que el sudor es el mecanismo que le permite a tu cuerpo equilibrar su temperatura. Pero, ¿sabías que el agua ayuda a que esto sea posible? El líquido de tu organismo contribuye a disipar el calor, regulando tu temperatura corporal general. Cuando tu cuerpo se calienta demasiado, el agua se libera por medio de la sudoración, eliminando así el calor del cuerpo. Si el agua que se pierde a través del sudor no se repone, el cuerpo se puede calentar en extremo, lo cual resulta peligroso.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-5" class="ui-body-d ui-content">
-					<h2>Cerebro</h2>
-					<p>
-					    La hidratación adecuada es importante para el funcionamiento apropiado de tu cerebro. Una ligera deshidratación, tan pequeña como 1 a 2% de peso corporal por deficiencia de líquido, puede deteriorar tu capacidad de concentración. Y la pérdida de más de 2% de peso corporal por deshidratación puede afectar las capacidades de proceso de tu cerebro y mermar la memoria de corto plazo.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-6" class="ui-body-d ui-content">
-					<h2>Corazón</h2>
-					<p>
-					    Los líquidos son importantes para el funcionamiento de un corazón saludable y desempeñan un papel en la normalización de la presión arterial. La deshidratación disminuye el gasto cardiaco, lo cual puede causar un incremento de la frecuencia cardiaca y una reducción de la presión arterial.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-7" class="ui-body-d ui-content">
-					<h2>Tracto Digestivo</h2>
-					<p>
-					    El agua contribuye al proceso de digestión de tus alimentos; se le encuentra en casi todo el tracto digestivo, desde la saliva en tu boca hasta la solución de enzimas en el último tramo de tu intestino. El agua ayuda también a disolver los nutrimentos para que puedan ser absorbidos en tu torrente sanguíneo y distribuidos en tus células.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-8" class="ui-body-d ui-content">
-					<h2>Músculo y Articulaciones</h2>
-					<p>
-					    Tus músculos y articulaciones, además de tu esqueleto, te permiten mantenerte de pie, sentarte, moverte, desarrollar tu vida cotidiana. El agua ayuda a proteger las articulaciones y mantiene el apropiado funcionamiento de los músculos. De hecho, aproximadamente de 70 al 75% de tus músculos están compuestos de agua.
-					</p>
-				    </div>
-				</div>
-			    </div>
-			    <div>
-				<div data-role="tabs" id="tabs">
-				    <div class="back">
-					<img src="img/cuerpo-hidratacion.jpg" class="adaptive-background" />
-				    </div>
-				   <div class="contenido">
-					<h1 class="title">Cuerpo e<br />
-					    <span style="padding-left: 15%;">Hidratación</span>
-					</h1>
-					<p>
-					    Gran parte de nuestro cuerpo está compuesto de agua. Además de ello, el agua es muy importante en el transporte y en la absorción de nutrimentos, contribuye en la eliminación de toxinas, lubrica y protege articulaciones, ayuda a que los músculos trabajen correctamente, a conservar la elasticidad y suavidad de la piel, normaliza la presión sanguínea y ayuda al cerebro a realizar correctamente funciones como la memoria y la concentración a corto plazo.
-					</p>
-				    </div>
-				    <h2 class="title">Beneficios</h2>
-				    <div data-role="navbar">
-					<ul>
-					    <li id="tab-1">
-						<a href="#tabs-1" data-ajax="false"><img src="img/celulas.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-2" data-ajax="false"><img src="img/rinones.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-3" data-ajax="false"><img src="img/piel.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-4" data-ajax="false"><img src="img/temperatura.png" /></a>
-					    </li>
-					    <li id="last" class="tab-5">
-						<a href="#tabs-5" data-ajax="false"><img src="img/cerebro.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-6" data-ajax="false"><img src="img/corazon.png" /></a>
-					    </li>
-					    <li>
-						<a href="#tabs-7" data-ajax="false"><img src="img/estomago.png" /></a>
-					    </li>
-					    <li id="last">
-						<a href="#tabs-8" data-ajax="false"><img src="img/muscle.png" /></a>
-					    </li>
-					</ul>
-				    </div>
-				    <div id="tabs-1" class="ui-body-d ui-content">
-					<h2>Células</h2>
-					<p>
-					    ¿Alguna vez te has preguntado cómo llegan a su destino los nutrimentos provenientes de los alimentos y bebidas que ingieres? El agua en tu organismo es crucial para transportar a tus células los hidratos de carbono, vitaminas y nutrimentos inorgánicos, así como otros nutrimentos importantes. De esa manera, las células están en capacidad de producir la energía que te permite mantenerte activo.
-					</p>
-				    </div>
-		
-				    <div id="tabs-2" class="ui-body-d ui-content">
-					<h2>Riñones</h2>
-					<p>
-					    El agua es esencial para los riñones; les ayuda a remover desechos, toxinas y nutrimentos en exceso del cuerpo. Los riñones de una persona bien hidratada y saludable filtran aproximadamente 180 litros de líquido diariamente.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-3" class="ui-body-d ui-content">
-					<h2>Piel</h2>
-					<p>
-					    Una buena hidratación conserva la elasticidad de la piel, su suavidad y coloración. El agua limpia las células de la piel por dentro y por fuera.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-4" class="ui-body-d ui-content">
-					<h2>Temperatura</h2>
-					<p>
-					    Tal vez ya sabes que el sudor es el mecanismo que le permite a tu cuerpo equilibrar su temperatura. Pero, ¿sabías que el agua ayuda a que esto sea posible? El líquido de tu organismo contribuye a disipar el calor, regulando tu temperatura corporal general. Cuando tu cuerpo se calienta demasiado, el agua se libera por medio de la sudoración, eliminando así el calor del cuerpo. Si el agua que se pierde a través del sudor no se repone, el cuerpo se puede calentar en extremo, lo cual resulta peligroso.
-					</p>
-				    </div>
-			    
-				    <div id="tabs-5" class="ui-body-d ui-content">
-					<h2>Cerebro</h2>
-					<p>
-					    La hidratación adecuada es importante para el funcionamiento apropiado de tu cerebro. Una ligera deshidratación, tan pequeña como 1 a 2% de peso corporal por deficiencia de líquido, puede deteriorar tu capacidad de concentración. Y la pérdida de más de 2% de peso corporal por deshidratación puede afectar las capacidades de proceso de tu cerebro y mermar la memoria de corto plazo.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-6" class="ui-body-d ui-content">
-					<h2>Corazón</h2>
-					<p>
-					    Los líquidos son importantes para el funcionamiento de un corazón saludable y desempeñan un papel en la normalización de la presión arterial. La deshidratación disminuye el gasto cardiaco, lo cual puede causar un incremento de la frecuencia cardiaca y una reducción de la presión arterial.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-7" class="ui-body-d ui-content">
-					<h2>Tracto Digestivo</h2>
-					<p>
-					    El agua contribuye al proceso de digestión de tus alimentos; se le encuentra en casi todo el tracto digestivo, desde la saliva en tu boca hasta la solución de enzimas en el último tramo de tu intestino. El agua ayuda también a disolver los nutrimentos para que puedan ser absorbidos en tu torrente sanguíneo y distribuidos en tus células.
-					</p>
-				    </div>
-				    
-				    <div id="tabs-8" class="ui-body-d ui-content">
-					<h2>Músculo y Articulaciones</h2>
-					<p>
-					    Tus músculos y articulaciones, además de tu esqueleto, te permiten mantenerte de pie, sentarte, moverte, desarrollar tu vida cotidiana. El agua ayuda a proteger las articulaciones y mantiene el apropiado funcionamiento de los músculos. De hecho, aproximadamente de 70 al 75% de tus músculos están compuestos de agua.
-					</p>
-				    </div>
-				</div>
-			    </div>-->
 			</div>
+			<div class="swiper-pages swiper-container">
+			    <div class="swiper-wrapper">
+				<div class="swiper-slide">
+				    <div class="contenido-slide">
+					<div class="back">
+					    <img src="img/cuerpo-hidratacion.jpg" class="adaptive-background" />
+					</div>
+					<div class="contenido">
+					    <h1 class="title">Cuerpo e<br />
+						<span style="padding-left: 15%;">Hidratación</span>
+					    </h1>
+					    <p>
+						Gran parte de nuestro cuerpo está compuesto de agua. Además de ello, el agua es muy importante en el transporte y en la absorción de nutrimentos, contribuye en la eliminación de toxinas, lubrica y protege articulaciones, ayuda a que los músculos trabajen correctamente, a conservar la elasticidad y suavidad de la piel, normaliza la presión sanguínea y ayuda al cerebro a realizar correctamente funciones como la memoria y la concentración a corto plazo.
+					    </p>
+					</div>
+					<div data-role="tabs" id="tabs">
+					    <div data-role="navbar">
+						<ul>
+						    <li id="tab-1">
+							<a href="#tabs-1" data-ajax="false"><img src="img/celulas.png" /></a>
+						    </li>
+						    <li>
+							<a href="#tabs-2" data-ajax="false"><img src="img/rinones.png" /></a>
+						    </li>
+						    <li>
+							<a href="#tabs-3" data-ajax="false"><img src="img/piel.png" /></a>
+						    </li>
+						    <li>
+							<a href="#tabs-4" data-ajax="false"><img src="img/temperatura.png" /></a>
+						    </li>
+						    <li id="last" class="tab-5">
+							<a href="#tabs-5" data-ajax="false"><img src="img/cerebro.png" /></a>
+						    </li>
+						    <li>
+							<a href="#tabs-6" data-ajax="false"><img src="img/corazon.png" /></a>
+						    </li>
+						    <li>
+							<a href="#tabs-7" data-ajax="false"><img src="img/estomago.png" /></a>
+						    </li>
+						    <li id="last">
+							<a href="#tabs-8" data-ajax="false"><img src="img/muscle.png" /></a>
+						    </li>
+						</ul>
+					    </div>
+					    <div id="tabs-1" class="ui-body-d ui-content">
+						<h2>Células</h2>
+						<p>
+						    ¿Alguna vez te has preguntado cómo llegan a su destino los nutrimentos provenientes de los alimentos y bebidas que ingieres? El agua en tu organismo es crucial para transportar a tus células los hidratos de carbono, vitaminas y nutrimentos inorgánicos, así como otros nutrimentos importantes. De esa manera, las células están en capacidad de producir la energía que te permite mantenerte activo.
+						</p>
+					    </div>
+			
+					    <div id="tabs-2" class="ui-body-d ui-content">
+						<h2>Riñones</h2>
+						<p>
+						    El agua es esencial para los riñones; les ayuda a remover desechos, toxinas y nutrimentos en exceso del cuerpo. Los riñones de una persona bien hidratada y saludable filtran aproximadamente 180 litros de líquido diariamente.
+						</p>
+					    </div>
+				    
+					    <div id="tabs-3" class="ui-body-d ui-content">
+						<h2>Piel</h2>
+						<p>
+						    Una buena hidratación conserva la elasticidad de la piel, su suavidad y coloración. El agua limpia las células de la piel por dentro y por fuera.
+						</p>
+					    </div>
+				    
+					    <div id="tabs-4" class="ui-body-d ui-content">
+						<h2>Temperatura</h2>
+						<p>
+						    Tal vez ya sabes que el sudor es el mecanismo que le permite a tu cuerpo equilibrar su temperatura. Pero, ¿sabías que el agua ayuda a que esto sea posible? El líquido de tu organismo contribuye a disipar el calor, regulando tu temperatura corporal general. Cuando tu cuerpo se calienta demasiado, el agua se libera por medio de la sudoración, eliminando así el calor del cuerpo. Si el agua que se pierde a través del sudor no se repone, el cuerpo se puede calentar en extremo, lo cual resulta peligroso.
+						</p>
+					    </div>
+				    
+					    <div id="tabs-5" class="ui-body-d ui-content">
+						<h2>Cerebro</h2>
+						<p>
+						    La hidratación adecuada es importante para el funcionamiento apropiado de tu cerebro. Una ligera deshidratación, tan pequeña como 1 a 2% de peso corporal por deficiencia de líquido, puede deteriorar tu capacidad de concentración. Y la pérdida de más de 2% de peso corporal por deshidratación puede afectar las capacidades de proceso de tu cerebro y mermar la memoria de corto plazo.
+						</p>
+					    </div>
+					    
+					    <div id="tabs-6" class="ui-body-d ui-content">
+						<h2>Corazón</h2>
+						<p>
+						    Los líquidos son importantes para el funcionamiento de un corazón saludable y desempeñan un papel en la normalización de la presión arterial. La deshidratación disminuye el gasto cardiaco, lo cual puede causar un incremento de la frecuencia cardiaca y una reducción de la presión arterial.
+						</p>
+					    </div>
+					    
+					    <div id="tabs-7" class="ui-body-d ui-content">
+						<h2>Tracto Digestivo</h2>
+						<p>
+						    El agua contribuye al proceso de digestión de tus alimentos; se le encuentra en casi todo el tracto digestivo, desde la saliva en tu boca hasta la solución de enzimas en el último tramo de tu intestino. El agua ayuda también a disolver los nutrimentos para que puedan ser absorbidos en tu torrente sanguíneo y distribuidos en tus células.
+						</p>
+					    </div>
+					    
+					    <div id="tabs-8" class="ui-body-d ui-content">
+						<h2>Músculo y Articulaciones</h2>
+						<p>
+						    Tus músculos y articulaciones, además de tu esqueleto, te permiten mantenerte de pie, sentarte, moverte, desarrollar tu vida cotidiana. El agua ayuda a proteger las articulaciones y mantiene el apropiado funcionamiento de los músculos. De hecho, aproximadamente de 70 al 75% de tus músculos están compuestos de agua.
+						</p>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="swiper-slide">
+				    <div class="contenido-slide">
+					<div class="image">
+					    <img src="img/te-verde.png" />
+					</div>
+					<div class="content">
+					    <div class="title">Slide 2</div>
+					    <p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus rutrum libero quis eleifend. Pellentesque at eros at felis pretium faucibus. Vivamus in venenatis sapien. Vestibulum ultricies eu eros vel mollis. Morbi odio eros, lobortis eget lectus ac, gravida faucibus diam. Pellentesque commodo porta augue in faucibus. Nam pellentesque a erat ut suscipit. Nullam semper eleifend metus. Curabitur vitae pharetra nisi. 
+					    </p>
+					    <p>
+						Quisque condimentum at velit id ultrices. Nunc vel pretium velit, sed feugiat neque. Donec convallis faucibus tortor. Praesent facilisis, ligula imperdiet imperdiet malesuada, elit justo accumsan magna, id dictum neque tellus sed mi.
+					    </p>
+					    
+					    <img src="img/gda-te.png" />
+					</div>
+				    </div>
+				</div>
+			    </div>
+			</div>
+			<link rel="stylesheet" href="css/idangerous.swiper.css">
+			<!-- Don't forget to get the latest Swiper and scrollbar version here-->
+			<script src="js/idangerous.swiper-2.0.min.js"></script>
+			<!--<script src="js/idangerous.swiper.scrollbar-2.0.js"></script>-->
+			<script src="js/simple-app.js"></script>
 		    </div>
 		</div>
 	    </div>
