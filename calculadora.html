@@ -124,20 +124,6 @@
                                     });
             });
         </script>
-	<script type="text/javascript">
-	    var valor1 = 0;
-	    var valor2 = 0;
-	    //var valor3 = 0;
-	    function sumar(radio) {
-		var valor = parseFloat(radio.value);
-		if (radio.name == "sexo")
-		    valor1 = parseFloat (valor);      
-		else
-		    valor2 = parseFloat (valor);
-		    //valor3 = parseFloat (valor);
-	      document.getElementById("resultado").value = parseFloat (valor1 + valor2) .toFixed(2);
-	    }
-	</script>
     </head>
     <body>
         <div data-role="page" id="page-success" data-dom-cache="true">
@@ -162,14 +148,14 @@
 				<h2>Introdice tus datos</h2>
 				<fieldset data-role="controlgroup" data-type="horizontal">
 				    <legend>Sexo:</legend>
-				    <input type="radio" name="sexo" id="RadioGroup1_0" value="0.1" onclick="sumar(this);"  />
+				    <input type="radio" name="sexo" id="RadioGroup1_0" value="0.10" onclick="sumar(this);"  />
 				    <label for="RadioGroup1_0">Femenino</label>
-				    <input type="radio" name="sexo" id="RadioGroup1_1" value="0.2" onclick="sumar(this);"  />
+				    <input type="radio" name="sexo" id="RadioGroup1_1" value="0.20" onclick="sumar(this);"  />
 				    <label for="RadioGroup1_1">Masculino</label>
 				</fieldset>
-				<select onClick="Suma2(this.checked,this.value)" name="Edad" id="age" >
-				    <option value="50">0</option>
-				    <option value="100">1</option>
+				<select onclick="sumar(this);" name="Edad" id="age" >
+				    <option onclick="sumar(this);" id="age" value="50">0</option>
+				    <option onclick="sumar(this);" id="age" value="100">1</option>
 				    <option value="2">2</option>
 				    <option value="3">3</option>
 				    <option value="4">4</option>
@@ -438,12 +424,12 @@
 				
 				<fieldset class="dias" data-role="controlgroup" data-type="horizontal">
 				    <legend>Elige cuantos días de la semana</legend>
-				    <input type="radio" name="dias" id="radio_6" value="0.2" onClick="Suma2(this.checked,this.value)" />
-				    <label for="radio_6">1-2</label>
-				    <input type="radio" name="dias" id="radio_7" value="0.4" onClick="Suma2(this.checked,this.value)" />
-				    <label for="radio_7">3-4</label>
-				    <input type="radio" name="dias" id="radio_8" value="0.6" onClick="Suma2(this.checked,this.value)" />
-				    <label for="radio_8">5 o más</label>
+				    <input type="radio" name="dias" id="RadioGroup3_0" value="0.2" onclick="sumar(this);" />
+				    <label for="RadioGroup3_0">1-2</label>
+				    <input type="radio" name="dias" id="RadioGroup3_1" value="0.4" onclick="sumar(this);" />
+				    <label for="RadioGroup3_1">3-4</label>
+				    <input type="radio" name="dias" id="RadioGroup3_2" value="0.6" onclick="sumar(this);" />
+				    <label for="RadioGroup3_2">5 o más</label>
 				</fieldset>
 				
 			    </div>
@@ -456,8 +442,6 @@
 				    +2.01 ejercicio
 				</p>
 				<p class="litros">
-				    <!--<input type="hidden" value="0.00" id="totalsiniva2" name="totalsiniva2" />    
-				    <input id="pago" class="resultado" type="text" id="total2" name="total2" value="0" disabled />-->
 				    <input type="text" name="resultado" id="resultado" disabled="disabled" value="0" />
 				    litros
 				</p>
@@ -474,5 +458,28 @@
 		</div>
 	    </div>
 	</div>
+	<script>
+	    $(document).ready(function(e) {
+		var $inRadio = $("#form1").find("input[type='radio']");
+		var $inSelect = $("#form1").find("input[type='select']");
+		var $inResultado = $("#form1").find("#resultado");
+		var $valores = {};
+		
+		$inRadio.on("change", function(){
+		    
+		    var $valor = +$(this).val();
+		    var $nombre = $(this).attr("name");
+		    
+		    $valores[""+ $nombre+ ""] = $valor;
+		    
+		    var $suma = 0;
+		    
+		    $.each($valores, function(indice, $valorArray){
+		       $suma =+ $suma + $valorArray; 
+		    });
+		    $inResultado.val($suma);
+		});
+	    });
+	</script>
     </body>
 </html>
