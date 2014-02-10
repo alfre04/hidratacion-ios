@@ -418,7 +418,7 @@
 				</ul>
 				<div class="tiempo grid">
 				    <p>Tiempo</p>
-				    <input name="tiempo" id="radio_10" class="knob" data-angleOffset=0 data-linecap=round value="0" onClick="Suma2(this.checked,this.value)" />
+				    <input type="text" name="tiempo" class="knob" data-angleOffset=0 data-linecap=round value="0" />
 				</div>
 				
 				<fieldset class="dias" data-role="controlgroup" data-type="horizontal">
@@ -436,9 +436,11 @@
 			    <div id="paso-3" class="pasos">
 				<h2>Calcula tu necesidad de hidratación diaria</h2>
 				<p>Tu estimado de hidratación diaria es de:</p>
-				<p>
-				    3.21 básico<br />
-				    +2.01 ejercicio
+				<p class="totalbasico">
+				    <input type="text" name="basico" id="basico" disabled="disabled" value="0" /> <span>básico</span><br />
+				</p>
+				<p class="totalejercicio">
+				    <input type="text" name="totalejercicio" id="totalejercicio" disabled="disabled" value="0" /> <span>ejercicio</span>
 				</p>
 				<p class="litros">
 				    <input type="text" name="resultado" id="resultado" disabled="disabled" value="0" />
@@ -458,49 +460,107 @@
 	    </div>
 	</div>
 	<script>
-$(document).ready(function(e) {
- 
-            $('#form1').change(function() {
- 
-               var obj = {};
-               var string = '';
-               var sum = 0;
- 
-               // Grupo 1
-               if ($("input:radio[name=sexo]").is(':checked')) {
-                  var n1 = $("input:radio[name=sexo]:checked").val();
-                  sum += parseFloat(n1);
-               }
-               
-                // Grupo 2
-               if ($("input:radio[name=ejercicio]").is(':checked')) {
-                  var n1 = $("input:radio[name=ejercicio]:checked").val();
-                  sum += parseFloat(n1);
-               }
-               
-                // Grupo 3
-               if ($("input:radio[name=dias]").is(':checked')) {
-                  var n1 = $("input:radio[name=dias]:checked").val();
-                  sum += parseFloat(n1);
-               }
-               
-               // Grupo 4
-               if ($("select option[name=edad]").is(':checked')) {
-                  var n1 = $("select option[name=edad]:checked").val();
-                  sum += parseFloat(n1);
-               }
-	       
-	       // Grupo 5
-               if ($("select option[name=peso]").is(':checked')) {
-                  var n1 = $("select option[name=peso]:checked").val();
-                  sum += parseFloat(n1);
-               }
- 
-               $('#resultado').val(sum);
- 
-            });
-         });
- 
-</script>
+	    $(document).ready(function(e) {
+		/***Calcula Basico***/
+		$('#form1').change(function() {
+		
+		    var obj = {};
+		    var string = '';
+		    var sum = 0;
+		    
+		    // Grupo 1
+		    if ($("input:radio[name=sexo]").is(':checked')) {
+		       var n1 = $("input:radio[name=sexo]:checked").val();
+		       sum += parseFloat(n1);
+		    }
+		    
+		    
+		    // Grupo 2
+		    if ($("select option[name=edad]").is(':checked')) {
+			var n1 = $("select option[name=edad]:checked").val();
+			sum += parseFloat(n1);
+		    }
+		    
+		    // Grupo 3
+		    if ($("select option[name=peso]").is(':checked')) {
+		       var n1 = $("select option[name=peso]:checked").val();
+		       sum += parseFloat(n1);
+		    }
+		    
+		    $('#basico').val(sum);
+		
+		});
+		
+		/***Calcula Ejercicio***/
+		$('#form1').change(function() {
+		
+		    var obj = {};
+		    var string = '';
+		    var sum = 0;
+		    
+		    // Grupo 1
+		    if ($("input:radio[name=ejercicio]").is(':checked')) {
+		       var n1 = $("input:radio[name=ejercicio]:checked").val();
+		       sum += parseFloat(n1);
+		    }
+		    
+		    // Grupo 2
+		    if ($("input:radio[name=dias]").is(':checked')) {
+		       var n1 = $("input:radio[name=dias]:checked").val();
+		       sum += parseFloat(n1);
+		    }
+		    
+		    
+		    $('#totalejercicio').val(sum);
+		
+		});
+		
+		/***Total***/
+		$('#form1').change(function() {
+		    var obj = {};
+		    var string = '';
+		    var sum = 0;
+		    
+		    // Grupo 1
+		    if ($("input:radio[name=sexo]").is(':checked')) {
+		       var n1 = $("input:radio[name=sexo]:checked").val();
+		       sum += parseFloat(n1);
+		    }
+		    
+		    // Grupo 2
+		    if ($("input:radio[name=ejercicio]").is(':checked')) {
+		       var n1 = $("input:radio[name=ejercicio]:checked").val();
+		       sum += parseFloat(n1);
+		    }
+		    
+		    // Grupo 3
+		    if ($("input:radio[name=dias]").is(':checked')) {
+		       var n1 = $("input:radio[name=dias]:checked").val();
+		       sum += parseFloat(n1);
+		    }
+		    
+		    // Grupo 4
+		    if ($("select option[name=edad]").is(':checked')) {
+		       var n1 = $("select option[name=edad]:checked").val();
+		       sum += parseFloat(n1);
+		    }
+		    
+		    // Grupo 5
+		    if ($("select option[name=peso]").is(':checked')) {
+		       var n1 = $("select option[name=peso]:checked").val();
+		       sum += parseFloat(n1);
+		    }
+		    
+		    // Grupo 6
+		    if ($("input:text[name=tiempo]").is(':checked')) {
+		       var n1 = $("input:text[name=tiempo]:checked").val();
+		       sum += parseFloat(n1);
+		    }
+	
+		    $('#resultado').val(sum);
+      
+		});
+	    });
+	</script>
     </body>
 </html>
