@@ -57,6 +57,12 @@ Basic Swiper Styles
 	transform:translate3d(0px,0,0);
 	transition-timing-function:ease;
 }
+
+.swiper-nav .swiper-wrapper{
+	transform: none !important;
+	transition-duration: 0s !important;
+}
+
 .swiper-free-mode > .swiper-wrapper {
 	-webkit-transition-timing-function: ease-out;
 	-moz-transition-timing-function: ease-out;
