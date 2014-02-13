@@ -34,6 +34,7 @@
 	<script src="js/scroll/mobiscroll.select.js" type="text/javascript"></script>
 	<link href="js/scroll/css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
 	<script src="js/scroll/jquery.knob.js"></script>
+	
         <script>
             $(function($) {
 
@@ -518,6 +519,9 @@
 		
 		/***Total***/
 		$('#form1').change(function() {
+		    $("#resultado").fadeOut(600);
+		    $("#resultado").fadeIn(600);
+		    
 		    var obj = {};
 		    var string = '';
 		    var sum = 0;
