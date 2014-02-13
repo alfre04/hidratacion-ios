@@ -1,8 +1,8 @@
 #sb-title-inner,#sb-info-inner,#sb-loading-inner,div.sb-message{color: #000000;font-size: 1.3em !important;}
 #sb-container{position:fixed;margin:0;padding:0;top:0;left:0;z-index:999;text-align:left;visibility:hidden;display:none;}
-#sb-overlay{position:relative;height:100%;width:100%;}
-#sb-wrapper{background: none repeat scroll 0 0 #FFFFFF;border-radius: 10px;color: #000000;padding: 0 4%;position: absolute;visibility: hidden;width: 100px;}
-#sb-wrapper-inner{border: medium none;height: 235px !important;overflow: hidden;position: relative;}
+#sb-overlay{position:relative;height:100%;width:100%;z-index: -900;}
+#sb-wrapper{background: url("../../../img/font-home.png") repeat scroll 0 0 rgba(0, 0, 0, 0);height: 100%;left: 0 !important;position: relative;top: 0 !important;width: 100% !important;}
+#sb-wrapper-inner{border: medium none;height: 100% !important;overflow: hidden;position: relative;}
 #sb-body{height: 100%;position: relative;}
 #sb-body-inner{position:absolute;height:100%;width:100%;}
 #sb-player.html{height:100%;overflow:auto;}
@@ -11,10 +11,9 @@
 #sb-loading-inner{position:absolute;font-size:14px;line-height:24px;height:24px;top:50%;margin-top:-12px;width:100%;text-align:center;}
 #sb-loading-inner span{background:url(loading.gif) no-repeat;padding-left:34px;display:inline-block;}
 #sb-body,#sb-loading{background-color: rgba(0, 0, 0, 0);}
-#sb-title,#sb-info{position:relative;margin:0;padding:0;overflow:hidden;}
-#sb-title,#sb-title-inner{height: auto;line-height: 26px;padding: 3% 0 0;}
+#sb-title,#sb-info{margin: -5% 0 0;overflow: hidden;padding: 0;position: relative;}
+#sb-title,#sb-title-inner{height: auto;line-height: 26px;}
 #sb-title-inner{font-size:16px;}
-#sb-info,#sb-info-inner{height: auto;line-height: 20px;margin-bottom: 5%;}
 #sb-info-inner{font-size:12px;}
 #sb-nav{background: none repeat scroll 0 0 #E61D2B;border-radius: 3px;float: right;height: 16px;padding: 1% 2% 2%;width: auto;}
 #sb-nav a{background-repeat: no-repeat;color: #FFFFFF;cursor: pointer;display: block;font-size: 0.8em;}
