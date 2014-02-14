@@ -22,7 +22,7 @@ body {
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color:#FFFFFF;
     color: #201f1f;
-    font-family: 'open_sanslight';
+    font-family: 'Gotham-Thin';
     height:100% !important;
     width:100%;
 }
